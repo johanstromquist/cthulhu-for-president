@@ -33,6 +33,26 @@ nav ul li a {
     font-size: 24px;
 }
 
+/* Link styles */
+a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #aaddaa;
+}
+
+a:active {
+    color: #ffffff;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
 /* Main section styles */
 main {
     padding: 40px;
@@ -46,6 +66,7 @@ h1, h2 {
     color: #aaddaa;
     margin-bottom: 20px;
     font-family: 'IM Fell DW Pica SC', serif;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 h1 {
@@ -124,9 +145,6 @@ body::before {
     position: relative;
     z-index: 1;
     /* Add any other styles for the container */
-}
-h1, h2 {
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .cta-button {

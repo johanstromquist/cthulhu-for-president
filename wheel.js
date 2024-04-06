@@ -1,5 +1,5 @@
 // Get the backend based on window host
-const backend = !window.location.hostname  ? 'http://127.0.0.1:5000' : 'https://johnmion.pythonanywhere.com';
+const backend = window.location.hostname  ? 'https://johnmion.pythonanywhere.com' : 'http://127.0.0.1:5000';
 
 // Get the wheel container and result elements
 const wheelContainer = document.getElementById('wheel-container');

@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.8.4/dist/mui.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+
+    <script>
+        (function() {
+          var debuggingScript = document.createElement('script');
+          debuggingScript.src = 'debugging_tools.js';
+          debuggingScript.async = true;
+          debuggingScript.onerror = function() {
+            // Handle the error silently
+            console.warn('Debugging tools script not found.');
+          };
+          document.head.appendChild(debuggingScript);
+        })();
+      </script>
 </head>
 <body>
     <div class="container">
@@ -15,12 +30,14 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#campaign">Campaign</a></li>
                     <li><a href="#pins">Enamel Pins</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </nav>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Campaign Logo" class="campaign-logo">
+            </div>            
         </header>
 
         <main>
@@ -37,6 +54,47 @@
                     Cthulhu 2024: Why settle for a lesser evil?</p>
             </section>
 
+            <section id="campaign">
+                <h2>Campaign Program</h2>
+                <p>Spin the Wheel of Madness and let Cthulhu answer your deepest questions about its revolutionary political program.</p>
+                <p>By spinning the Wheel of Madness you accept that the Eldritch Party cannot be held liable for any induced insanity that might follow. You also acknowledge that any prizes that might be promoted as a result of spinning the Wheel of Madness are only possible to claim as a backer of our <a href="https://www.kickstarter.com/projects/johnmion/cthulhu-for-president-why-settle-for-a-lesser-enamel-pin" target="_blank" class="" rel="noopener">Kickstarter campaign</a>.</p>
+                <div class="wheel-wrapper">
+                    <div id="wheel-container">
+                        <div id="wheel"></div>
+                        <img id="wheel-symbol" src="images/wheel-icon.png" alt="Wheel Symbol">
+                        <button id="spin-button" class="glow-button MuiButton-root MuiButton-contained MuiButton-containedSecondary">Spin the Wheel</button>
+                    </div>
+                    <div id="result-wrapper">
+                        <div id="result-container">
+                            <h2>Eternal Truths</h2>
+                            <h4>Excerpts from the political manifesto of the Eldritch Party</h4>
+                            <p id="resultQuestion"></p>
+                            <p id="resultAnswer">Spin the Wheel of Madness to learn more about the Eldritch Party's grand program.<BR/><BR/>
+                            
+                                For our magnanimous Kickstarter Backers there's even a prize to be won! (2% chance per spin)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pins">
+                <h2>Eldritch Horror Enamel Pins</h2>
+                <p>In these chaotic times, let the world know where your loyalties lie by proudly displaying one of the official Cthulhu-for-President enamel pins. By backing our Kickstarter campaign, you'll be rewarded with one of more of these exquisite pins featuring the majestic visage of Cthulhu or one of the other greater of minor horrors of the cosmos, symbolizing the impending union of eldritch horror and American politics.<BR/><BR/>
+
+                    Wear these pins as a declaration of your devotion to the cause of chaos and insanity. They serve as beacons, attracting fellow cultists and sending a chill down the spines of the uninitiated. But be warned, donning these pins comes with great responsibility, as you become an ambassador of the Elder Gods.<BR/><BR/>
+                    
+                    Back our Kickstarter campaign, secure your own Cthulhu-for-President enamel pins and help us unlock our stretch-goals! Wear them with pride, knowing that you are part of a movement that transcends the petty concerns of human politics. Together, we shall usher in a new age of madness, with Cthulhu as our guide and these enamel pins as our symbols of allegiance.<BR/><BR/>
+                    
+                    Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!</p>
+                <a href="https://www.kickstarter.com/projects/johnmion/cthulhu-for-president-why-settle-for-a-lesser-enamel-pin" target="_blank" class="cta-button MuiButton-root MuiButton-contained MuiButton-containedPrimary" rel="noopener">Back the Kickstarter</a>
+            </section>
+
+            <section id="gallery">
+                <h2>Enamel Pin Concept Art Gallery</h2>
+                <div id="gallery-container" class="gallery-container"></div>
+            </section>
+
             <section id="about">
                 <h2>About Candidate Cthulhu</h2>
                 <p>Hailing from the sunken city of R'lyeh, Cthulhu has emerged from his cosmic slumber to bring a much-needed touch of madness to American politics. With a track record spanning millennia, Cthulhu's experience in driving mortals to the brink of insanity makes him uniquely qualified to navigate the already bizarre landscape of Washington, D.C.<BR/><BR/>
@@ -51,33 +109,6 @@
                     
                     So, America, the choice is clear. Cthulhu offers a once-in-a-lifetime opportunity to embrace the absurdity of our existence and revel in the madness that follows. A vote for Cthulhu is a vote for the end of politics as we know it, and the beginning of a new era where insanity reigns supreme. In Cthulhu, we shall find the leader we deserve, the one who will guide us into the welcoming embrace of oblivion with a tentacled grin on his face.</p>
             </section>
-
-            <section id="campaign">
-                <h2>Campaign Program</h2>
-                <p>Not just an eldritch abomination, but a deity of the times, Cthulhu embraces the latest technologies. Rather than giving you a wall of text that you'll never read, Cthulhu grants you the opportunity of a lifetime - to speak with the fiend itself.<BR/><BR/>
-                
-                Ask Cthulhu anything about the Eldritch Party's political program, and it shall answer.</p>
-                <form>
-                    <div class="MuiFormControl-root">
-                        <label class="MuiFormLabel-root" for="prompt">Ask your question here:</label>
-                        <input class="MuiInput-root MuiInput-underline" type="text" id="prompt" name="prompt" placeholder="e.g., What is your stance on education?" required>
-                    </div>
-                    <button class="MuiButton-root MuiButton-contained MuiButton-containedSecondary" type="submit">Ask Cthulhu</button>
-                </form>
-                <div id="speech-output"></div>
-            </section>
-
-            <section id="pins">
-                <h2>Eldritch Horror Enamel Pins</h2>
-                <p>In these chaotic times, let the world know where your loyalties lie by proudly displaying one of the official Cthulhu-for-President enamel pins. By backing our Kickstarter campaign, you'll be rewarded with one of more of these exquisite pins features the majestic visage of Cthulhu or one of the other greater of minor horrors of the cosmos, symbolizing the impending union of eldritch horror and American politics.<BR/><BR/>
-
-                    Wearing these pins is more than just a fashion statement; it's a declaration of your devotion to the cause of chaos and insanity. It serves as a beacon, attracting fellow cultists and sending a chill down the spines of the uninitiated. But be warned, donning these pins comes with great responsibility, as you become an ambassador of the Elder Gods.<BR/><BR/>
-                    
-                    So, my fellow Americans, back our Kickstarter campaign and secure your own Cthulhu-for-President enamel pins. Wear them with pride, knowing that you are part of a movement that transcends the petty concerns of human politics. Together, we shall usher in a new age of madness, with Cthulhu as our guide and these enamel pins as our symbols of allegiance.<BR/><BR/>
-                    
-                    Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn!</p>
-                <a href="https://www.kickstarter.com/projects/johnmion/cthulhu-for-president-why-settle-for-a-lesser-enamel-pin" target="_blank" class="cta-button MuiButton-root MuiButton-contained MuiButton-containedPrimary" rel="noopener">Back the Kickstarter</a>
-            </section>
         </main>
 
         <footer>
@@ -85,7 +116,8 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.8.4/dist/mui.min.js"></script>
-        <script src="app.js"></script>
+        <script src="wheel.js"></script>
+        <script src="gallery.js"></script>
     </div>
 </body>
 </html>

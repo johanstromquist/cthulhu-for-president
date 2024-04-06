@@ -245,6 +245,50 @@ nav ul li a {
     text-align: left;
 }
 
+.result-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.result-header h2 {
+    margin-bottom: 0;
+}
+
+.result-header + h4 {
+    margin-top: 5px; /* Adjust the margin-top of the subheading */
+}
+
+.share-buttons {
+    display: flex;
+  }
+  
+  .share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  
+  .twitter {
+    background-color: #222;
+  }
+  
+  .facebook {
+    background-color: #1877f2;
+  }
+  
+  .reddit {
+    background-color: #ff4500;
+  }
+
 #result-container h3 {
     font-size: 24px;
     margin-bottom: 10px;

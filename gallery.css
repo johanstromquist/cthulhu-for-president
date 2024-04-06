@@ -33,6 +33,11 @@
     font-size: 16px;
   }
 
+  #gallery-CTA {
+    text-align: center;
+    width: 100%;
+  }
+
   @media screen and (max-width: 900px) {
     .gallery-container {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));

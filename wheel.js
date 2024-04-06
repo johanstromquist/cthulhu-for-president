@@ -1,3 +1,6 @@
+// Get the backend based on window host
+const backend = !window.location.hostname  ? 'http://127.0.0.1:5000' : 'https://johnmion.pythonanywhere.com';
+
 // Get the wheel container and result elements
 const wheelContainer = document.getElementById('wheel-container');
 const resultNumber = document.getElementById('result-number');
@@ -115,7 +118,8 @@ function spinWheel() {
     }, 20);
   
     // Make a request to the backend API to get the result
-    fetch('http://127.0.0.1:5000/spin', {
+    console.info(spinBackend = backend+"/spin");
+    fetch(backend+'/spin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -293,7 +297,7 @@ function claimReward() {
     }
     
     // Make a request to the backend API to claim the reward
-    fetch('http://127.0.0.1:5000/claim', {
+    fetch(`${backend}/claim`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -12,8 +12,8 @@ const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 
 // Set the canvas dimensions
-canvas.width = 300;
-canvas.height = 300;
+canvas.width = 500;
+canvas.height = 500;
 
 // Append the canvas to the wheel container
 wheelContainer.appendChild(canvas);
@@ -21,7 +21,7 @@ wheelContainer.appendChild(canvas);
 // Define the wheel properties
 const segments = 100;
 const segmentAngle = (2 * Math.PI) / segments;
-const wheelRadius = 140;
+const wheelRadius = 240;
 const colors = ['#1c3b5a', '#3a6893', '#4b5320', '#6c7a2e', '#aaddaa', '#eeffee'];
 
 // Function to draw the wheel
